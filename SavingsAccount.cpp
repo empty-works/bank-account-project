@@ -9,7 +9,12 @@ SavingsAccount::~SavingsAccount() {
 
 bool SavingsAccount::deposit(const double amount) {
 
-	Account::deposit(amount);
+	// Add interest.
+	double new_amt{amount + (amount * savings_interest)};		
+	return Account::deposit(new_amt);
 }
 
+bool SavingsAccount::withdraw(const double amount) {
 
+	return Account::withdraw(amount);
+}
