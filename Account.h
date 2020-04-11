@@ -19,7 +19,7 @@ public:
 	~Account();
 	
 	bool deposit(const double amount);
-	bool withdraw();	
+	bool withdraw(const double amount);	
 };
 
 #endif
