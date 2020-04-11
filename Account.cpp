@@ -13,3 +13,16 @@ Account::Account(std::string name, double amount) {
 
 Account::~Account() {
 }
+
+bool Account::deposit(const double amount) {
+
+	if(amount < 0) {
+	
+		return false;
+	}
+	else {
+	
+		balance += amount;
+		return true;
+	}
+}

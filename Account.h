@@ -7,8 +7,9 @@
 class Account {
 
 private:
-	std::string name{DEFAULT_NAME};
-	double amount{DEFAULT_AMOUNT};
+	std::string name;
+	double amount;
+	double balance{0.0};
 protected:
 	static constexpr const char *DEFAULT_NAME = "Unnamed";
 	static constexpr double DEFAULT_AMOUNT = 0.0;	
