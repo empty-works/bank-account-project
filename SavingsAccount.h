@@ -12,8 +12,8 @@ public:
 	SavingsAccount(std::string name, double amount, double interest = 0.05);
 	~SavingsAccount();
 
-	int deposit(const double amount);
-	int withdraw();	
+	bool deposit(const double amount);
+	bool withdraw();	
 };
 
 #endif
