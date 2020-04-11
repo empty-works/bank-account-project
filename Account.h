@@ -17,7 +17,7 @@ public:
 	Account(std::string acc_name = DEFAULT_NAME, double initial_amt = DEFAULT_AMOUNT);
 	~Account();
 	
-	int deposit(const size_t amount);
+	int deposit(const double amount);
 	int withdraw();	
 };
 
