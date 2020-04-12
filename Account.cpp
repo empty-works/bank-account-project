@@ -11,7 +11,7 @@ std::ostream &operator<<(std::ostream &os, const Account &acc) {
 Account::Account(std::string name, double amount) {
 
 	this->name = name;
-	this->amount = amount;	
+	this->balance = amount;	
 }
 
 bool Account::deposit(const double amount) {
