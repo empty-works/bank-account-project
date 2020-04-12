@@ -13,12 +13,10 @@ private:
 	double amount;
 	double balance{0.0};
 protected:
-	static constexpr const char *DEFAULT_NAME = "Unnamed";
+	static constexpr const char *DEFAULT_NAME = "Unnamed account";
 	static constexpr double DEFAULT_AMOUNT = 0.0;	
 public:
-	Account();
 	Account(std::string acc_name = DEFAULT_NAME, double initial_amt = DEFAULT_AMOUNT);
-	~Account();
 	
 	bool deposit(const double amount);
 	bool withdraw(const double amount);

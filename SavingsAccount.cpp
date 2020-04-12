@@ -10,7 +10,7 @@ SavingsAccount::~SavingsAccount() {
 
 std::ostream &operator<<(std::ostream &os, const SavingsAccount &acc) {
 
-	os << "Account name: " << acc.get_name()  << " Balance: " << acc.get_balance() << "Interest rate: " << acc.savings_interest;
+	os << "Account name: " << acc.get_name()  << " || " << " Balance: " << acc.get_balance() << " || " << "Interest rate: " << acc.savings_interest;
 	return os;
 }
 
