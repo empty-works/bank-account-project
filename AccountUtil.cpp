@@ -23,6 +23,7 @@ void withdraw(std::vector<Account> acc_vec, double amount) {
 	for(auto acc : acc_vec) {
 	
 		acc.withdraw(amount);
+		std::cout << "Withdrew $" << amount << " from " << acc.get_name();
 	}
 }
 
