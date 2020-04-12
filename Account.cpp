@@ -2,6 +2,12 @@
 #include <string>
 #include "Account.h"
 
+std::ostream &operator<<(std::ostream &os, const Account &acc) {
+
+	os << "Balance: " << acc.balance << std::endl;
+	return os;
+}
+
 Account::Account() {
 }
 

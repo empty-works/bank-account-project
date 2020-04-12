@@ -6,6 +6,8 @@
 
 class Account {
 
+	friend std::ostream &operator<<(std::ostream &os, const Account &acc);
+
 private:
 	std::string name;
 	double amount;
