@@ -23,7 +23,8 @@ public:
 	bool deposit(const double amount);
 	bool withdraw(const double amount);
 
-	std::string get_name() const {return name;}	
+	std::string get_name() const {return name;}
+	double get_balance() const {return balance;}	
 };
 
 #endif
