@@ -14,7 +14,7 @@ void deposit(std::vector<Account> acc_vec, double amount) {
 	for(auto acc : acc_vec) {
 	
 		acc.deposit(amount);
-		std::cout << "Deposited $" << amount << " into " << acc.get_name(); 
+		std::cout << "Deposited $" << amount << " into " << acc.get_name() << " regular account." << std::endl; 
 	}	
 }
 
@@ -23,7 +23,7 @@ void withdraw(std::vector<Account> acc_vec, double amount) {
 	for(auto acc : acc_vec) {
 	
 		acc.withdraw(amount);
-		std::cout << "Withdrew $" << amount << " from " << acc.get_name();
+		std::cout << "Withdrew $" << amount << " from " << acc.get_name() << " regular account." << std::endl;
 	}
 }
 
@@ -35,5 +35,13 @@ void display(const std::vector<SavingsAccount> sav_acc_vec) {
 	}	
 }
 
-void deposit(std::vector<SavingsAccount> sav_acc_vec, double amount);
+void deposit(std::vector<SavingsAccount> sav_acc_vec, double amount) {
+
+	for(auto acc : sav_acc_vec) {
+	
+		acc.deposit(amount);
+		std::cout << "Deposited $" << amount << " into " << acc.get_name() << " savings account." << std::endl;
+	}
+}
+
 void withdraw(std::vector<SavingsAccount> sav_acc_vec, double amount);
