@@ -4,7 +4,7 @@
 
 std::ostream &operator<<(std::ostream &os, const Account &acc) {
 
-	os << "Balance: " << acc.balance << std::endl;
+	os << "Account name: " << acc.name  << " Balance: " << acc.balance;
 	return os;
 }
 
