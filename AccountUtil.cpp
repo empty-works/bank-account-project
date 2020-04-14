@@ -36,7 +36,7 @@ void withdraw(std::vector<Account> acc_vec, double amount) {
 		}
 		else {
 		
-			std::cout << "Insufficient amount." << std::endl;
+			std::cout << "Insufficient balance in " << acc << std::endl;
 		}
 	}
 }

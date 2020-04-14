@@ -19,9 +19,6 @@ int main() {
 
 	// Withdraw amounts in normal account
 	withdraw(acc_vec, 100);
-	display(acc_vec);
-
-		
 	
 	return 0;
 }
