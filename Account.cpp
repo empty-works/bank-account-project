@@ -27,13 +27,13 @@ bool Account::deposit(const double amount) {
 
 bool Account::withdraw(const double amount) {
 
-	if(amount >= balance) {
-	
-		return false;
-	}
-	else {
+	if(balance - amount >= 0) {
 	
 		balance -= amount;
 		return true;
+	}
+	else {
+	
+		return false;
 	}
 }
