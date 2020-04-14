@@ -16,7 +16,6 @@ int main() {
 
 	// Deposit amounts in normal account
 	deposit(acc_vec, 1000);
-	display(acc_vec);
 
 	// Withdraw amounts in normal account
 	withdraw(acc_vec, 100);

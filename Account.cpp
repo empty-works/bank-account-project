@@ -5,7 +5,7 @@
 std::ostream &operator<<(std::ostream &os, const Account &acc) {
 	
 	
-	os << "Account name: " << acc.name  << " || " << "Balance: " << acc.balance;
+	os << "[Account name: " << acc.name  << " || " << "Balance: " << acc.balance << "]";
 	return os;
 }
 
@@ -20,9 +20,7 @@ bool Account::deposit(const double amount) {
 		return false;
 	}
 	else {
-		std::cout << "Balance before deposit: $" << balance << std::endl;	
 		balance += amount;
-		std::cout << "Balance after deposit: $" << balance << std::endl;
 		return true;
 	}
 }

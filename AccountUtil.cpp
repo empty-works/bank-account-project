@@ -13,8 +13,15 @@ void deposit(std::vector<Account> acc_vec, double amount) {
 
 	for(auto &acc : acc_vec) {
 	
-		acc.deposit(amount);
-		std::cout << "Deposited $" << amount << " into " << acc.get_name() << " regular account." << std::endl; 
+		bool can_deposit = acc.deposit(amount);
+		if(can_deposit) {
+		
+			std::cout << "Deposited $" << amount << " into " << acc  << std::endl; 
+		}
+		else {
+		
+			std::cout << "Cannot deposit " << amount << " into " << acc << std::endl;
+		}
 	}	
 }
 
@@ -25,7 +32,7 @@ void withdraw(std::vector<Account> acc_vec, double amount) {
 		bool can_withdraw = acc.withdraw(amount);
 		if(can_withdraw) {
 			
-			std::cout << "Withdrew $" << amount << " from " << acc.get_name() << " regular account." << std::endl;
+			std::cout << "Withdrew $" << amount << " from " << acc << std::endl;
 		}
 		else {
 		
