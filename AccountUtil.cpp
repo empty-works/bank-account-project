@@ -53,8 +53,15 @@ void deposit(std::vector<SavingsAccount> sav_acc_vec, double amount) {
 
 	for(auto &acc : sav_acc_vec) {
 	
-		acc.deposit(amount);
-		std::cout << "Deposited $" << amount << " into " << acc.get_name() << " savings account." << std::endl;
+		bool can_deposit = acc.deposit(amount);
+		if(can_deposit) {
+		
+			std::cout << "Deposited $" << amount << " into " << acc << std::endl;
+		}
+		else {
+		
+			std::cout << "Cannot deposit into " << acc << std::endl;
+		}
 	}
 }
 
@@ -65,11 +72,11 @@ void withdraw(std::vector<SavingsAccount> sav_acc_vec, double amount) {
 		bool can_withdraw = acc.withdraw(amount);
 		if(can_withdraw) {
 		
-			std::cout << "Withdraw $" << amount << " from " << acc.get_name() << " savings account." << std::endl;
+			std::cout << "Withdraw $" << amount << " from " << acc << std::endl;
 		}
 		else {
 		
-			std::cout << "Insufficient amount." << std::endl;
+			std::cout << "Insufficient balance in account " << acc << std::endl;
 		}
 	}	
 }
