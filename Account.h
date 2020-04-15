@@ -6,7 +6,6 @@
 
 class Account {
 
-	friend std::ostream &operator<<(std::ostream &os, const Account &acc);
 
 protected:
 	std::string name;
@@ -21,7 +20,9 @@ public:
 	bool withdraw(const double amount);
 
 	std::string get_name() const {return name;}
-	double get_balance() const {return balance;}	
+	double get_balance() const {return balance;}
+
+	friend std::ostream &operator<<(std::ostream &os, const Account &acc);
 };
 
 #endif

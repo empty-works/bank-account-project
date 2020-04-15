@@ -1,7 +1,7 @@
 #include <iostream>
 #include "AccountUtil.h"
 
-void display(const std::vector<Account> acc_vec) {
+void display(const std::vector<Account> &acc_vec) {
 
 	for(const auto &acc : acc_vec) {
 	
@@ -9,7 +9,7 @@ void display(const std::vector<Account> acc_vec) {
 	}		
 }
 
-void deposit(std::vector<Account> acc_vec, double amount) {
+void deposit(std::vector<Account> &acc_vec, double amount) {
 
 	for(auto &acc : acc_vec) {
 	
@@ -25,7 +25,7 @@ void deposit(std::vector<Account> acc_vec, double amount) {
 	}	
 }
 
-void withdraw(std::vector<Account> acc_vec, double amount) {
+void withdraw(std::vector<Account> &acc_vec, double amount) {
 
 	for(auto &acc : acc_vec) {
 	
@@ -41,7 +41,7 @@ void withdraw(std::vector<Account> acc_vec, double amount) {
 	}
 }
 
-void display(const std::vector<SavingsAccount> sav_acc_vec) {
+void display(const std::vector<SavingsAccount> &sav_acc_vec) {
 
 	for(const auto &acc : sav_acc_vec) {
 	
@@ -49,7 +49,7 @@ void display(const std::vector<SavingsAccount> sav_acc_vec) {
 	}	
 }
 
-void deposit(std::vector<SavingsAccount> sav_acc_vec, double amount) {
+void deposit(std::vector<SavingsAccount> &sav_acc_vec, double amount) {
 
 	for(auto &acc : sav_acc_vec) {
 	
@@ -65,7 +65,7 @@ void deposit(std::vector<SavingsAccount> sav_acc_vec, double amount) {
 	}
 }
 
-void withdraw(std::vector<SavingsAccount> sav_acc_vec, double amount) {
+void withdraw(std::vector<SavingsAccount> &sav_acc_vec, double amount) {
 
 	for(auto &acc : sav_acc_vec) {
 	

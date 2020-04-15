@@ -6,7 +6,7 @@
 
 int main() {
 	
-	std::vector<Account> acc_vec{};
+	std::vector<Account> acc_vec;
 	
 	// Create normal accounts
 	acc_vec.push_back(Account{}); // Account name: Unnamed account || Balance: $0.0
@@ -14,13 +14,19 @@ int main() {
 	acc_vec.push_back(Account{"MySecondAccount", 1000.00}); // Account name: MySecondAccount || Balance: $1000.00	
 	display(acc_vec);		
 
+	std::cout << "------------------------------" << std::endl;
+
 	// Deposit amounts in normal account
 	deposit(acc_vec, 1000);
+
+	std::cout << "------------------------------" << std::endl;
 
 	// Withdraw amounts in normal account
 	withdraw(acc_vec, 100);
 
-	std::vector<SavingsAccount> sav_acc_vec{};
+	std::cout << "------------------------------" << std::endl;
+
+	std::vector<SavingsAccount> sav_acc_vec;
 
 	// Create savings accounts
 	sav_acc_vec.push_back(SavingsAccount{});
@@ -29,8 +35,17 @@ int main() {
 	sav_acc_vec.push_back(SavingsAccount{"MyThirdSavingsAccount", 2000, 10});
 	display(sav_acc_vec);
 
+	std::cout << "------------------------------" << std::endl;
+
 	// Deposit amounts in savings account
 	deposit(sav_acc_vec, 2000);
+
+	std::cout << "------------------------------" << std::endl;
+
+	// Withdraw amount from savings account
+	withdraw(sav_acc_vec, 500);
+
+	std::cout << "------------------------------" << std::endl;
 
 	return 0;
 }
