@@ -26,7 +26,11 @@ int main() {
 	sav_acc_vec.push_back(SavingsAccount{});
 	sav_acc_vec.push_back(SavingsAccount{"MySavingsAccount"});		
 	sav_acc_vec.push_back(SavingsAccount{"MySecondSavingsAccount", 2000});
+	sav_acc_vec.push_back(SavingsAccount{"MyThirdSavingsAccount", 2000, 10});
 	display(sav_acc_vec);
+
+	// Deposit amounts in savings account
+	deposit(sav_acc_vec, 2000);
 
 	return 0;
 }
