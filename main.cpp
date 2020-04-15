@@ -9,9 +9,9 @@ int main() {
 	std::vector<Account> acc_vec{};
 	
 	// Create normal accounts
-	acc_vec.push_back(Account {}); // Account name: Unnamed account || Balance: $0.0
-       	acc_vec.push_back(Account {"MyAccount"}); // Account name: MyAccount || Balance: $0.0
-	acc_vec.push_back(Account {"MySecondAccount", 1000.00}); // Account name: MySecondAccount || Balance: $1000.00	
+	acc_vec.push_back(Account{}); // Account name: Unnamed account || Balance: $0.0
+       	acc_vec.push_back(Account{"MyAccount"}); // Account name: MyAccount || Balance: $0.0
+	acc_vec.push_back(Account{"MySecondAccount", 1000.00}); // Account name: MySecondAccount || Balance: $1000.00	
 	display(acc_vec);		
 
 	// Deposit amounts in normal account
@@ -19,6 +19,14 @@ int main() {
 
 	// Withdraw amounts in normal account
 	withdraw(acc_vec, 100);
-	
+
+	std::vector<SavingsAccount> sav_acc_vec{};
+
+	// Create savings accounts
+	sav_acc_vec.push_back(SavingsAccount{});
+	sav_acc_vec.push_back(SavingsAccount{"MySavingsAccount"});		
+	sav_acc_vec.push_back(SavingsAccount{"MySecondSavingsAccount", 2000});
+	display(sav_acc_vec);
+
 	return 0;
 }
