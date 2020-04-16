@@ -1,12 +1,12 @@
 #ifndef CHECKINGACCOUNT_H_
 #define CHECKINGACCOUNT_H_
 
-#include <string>
+#include "Account.h"
 
 class CheckingAccount: public Account {
 
 private:
-	static constexpr const std::string *default_name = "Unnamed Checking Account";
+	static constexpr const char *default_name = "Unnamed Checking Account";
        	static constexpr double checking_fee = 1.50;	
 public:
 	 
