@@ -2,6 +2,7 @@
 #include <vector>
 #include "Account.h"
 #include "SavingsAccount.h"
+#include "CheckingAccount.h"
 #include "AccountUtil.h"
 
 int main() {
@@ -46,6 +47,12 @@ int main() {
 	withdraw(sav_acc_vec, 500);
 
 	std::cout << "------------------------------" << std::endl;
+
+	std::vector<CheckingAccount> check_acc_vec;
+	
+	// Create checking account
+	check_acc_vec.push_back(CheckingAccount{});
+	check_acc_vec.push_back(CheckingAccount{""});
 
 	return 0;
 }

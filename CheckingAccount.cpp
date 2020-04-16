@@ -1,4 +1,10 @@
+#include <iostream>
 #include "CheckingAccount.h"
+#include "Account.h"
+
+CheckingAccount::CheckingAccount(std::string name, double amount)
+	:Account{name, amount} {
+}
 
 bool CheckingAccount::withdraw(const double amount) {
 
@@ -9,7 +15,8 @@ bool CheckingAccount::withdraw(const double amount) {
 		return true;
 	}
 	else {
-	
+		
+		std::cout << "Error: amount to withdraw is less than the checking fee." << std::endl;	
 		return false;
 	}
 }
