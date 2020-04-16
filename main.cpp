@@ -52,7 +52,11 @@ int main() {
 	
 	// Create checking account
 	check_acc_vec.push_back(CheckingAccount{});
-	check_acc_vec.push_back(CheckingAccount{""});
+	check_acc_vec.push_back(CheckingAccount{"MyCheckingAccount"});
+	check_acc_vec.push_back(CheckingAccount{"MySecondCheckingAccount", 2000});
+	display(check_acc_vec);
 
+	std::cout << "------------------------------" << std::endl;	
+	
 	return 0;
 }
