@@ -1,6 +1,5 @@
 #include <iostream>
 #include "CheckingAccount.h"
-#include "Account.h"
 
 CheckingAccount::CheckingAccount(std::string name, double amount)
 	:Account{name, amount} {
@@ -21,7 +20,9 @@ bool CheckingAccount::withdraw(const double amount) {
 	}
 }
 
-std::ostream &operator<<(std::ostream os, const CheckingAccount &acc) {
+// Need friend method because friendship is not inherited.
+std::ostream &operator<<(std::ostream &os, const CheckingAccount &acc) {
 
-	
+	os << "[Checking Account: " << acc.name << " || " << "Balance: " << acc.balance << " || " << "Withdrawal fee: " << acc.checking_fee << std::endl;
+       return os;	
 }
