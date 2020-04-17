@@ -56,7 +56,10 @@ int main() {
 	check_acc_vec.push_back(CheckingAccount{"MySecondCheckingAccount", 2000});
 	display(check_acc_vec);
 
-	std::cout << "------------------------------" << std::endl;	
+	std::cout << "------------------------------" << std::endl;
+
+	// Deposit amounts in checking account
+	deposit(check_acc_vec, 3000);		
 	
 	return 0;
 }
