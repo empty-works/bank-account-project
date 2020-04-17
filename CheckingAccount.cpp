@@ -20,3 +20,8 @@ bool CheckingAccount::withdraw(const double amount) {
 		return false;
 	}
 }
+
+std::ostream &operator<<(std::ostream os, const CheckingAccount &acc) {
+
+	
+}

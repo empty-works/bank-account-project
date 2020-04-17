@@ -1,10 +1,13 @@
 #ifndef CHECKINGACCOUNT_H_
 #define CHECKINGACCOUNT_H_
 
+#include <iostream>
 #include <string>
 #include "Account.h"
 
 class CheckingAccount: public Account {
+
+friend std::ostream &operator<<(std::ostream &os, const CheckingAccount &acc);
 
 private:
 	static constexpr const char *default_name = "Unnamed Checking Account";

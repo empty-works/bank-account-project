@@ -88,7 +88,7 @@ void display(const std::vector<CheckingAccount> &check_acc_vec) {
 		std::cout << acc << std::endl;	
 	}		
 }
-// TODO customize for CheckingAccount
+
 void deposit(std::vector<CheckingAccount> &check_acc_vec, double amount) {
 
 	for(auto &acc : check_acc_vec) {
