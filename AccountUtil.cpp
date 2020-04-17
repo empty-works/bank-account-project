@@ -9,7 +9,7 @@ void display(const std::vector<Account> &acc_vec) {
 	}		
 }
 
-void deposit(std::vector<Account> &acc_vec, double amount) {
+void deposit(std::vector<Account> &acc_vec, const double amount) {
 
 	for(auto &acc : acc_vec) {
 	
@@ -25,7 +25,7 @@ void deposit(std::vector<Account> &acc_vec, double amount) {
 	}	
 }
 
-void withdraw(std::vector<Account> &acc_vec, double amount) {
+void withdraw(std::vector<Account> &acc_vec, const double amount) {
 
 	for(auto &acc : acc_vec) {
 	

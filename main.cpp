@@ -61,5 +61,10 @@ int main() {
 	// Deposit amounts in checking account
 	deposit(check_acc_vec, 3000);		
 	
+	std::cout << "------------------------------" << std::endl;
+
+	// Withdraw amounts in checking account
+	withdraw(check_acc_vec, 2000);
+
 	return 0;
 }
