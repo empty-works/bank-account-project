@@ -9,7 +9,7 @@ class TrustAccount: public SavingsAccount {
 	friend std::ostream &operator<<(std::ostream &os, const TrustAccount &acc);
 
 private:
-	
+	bool withdraw(const double amount);	
 };
 
 #endif
