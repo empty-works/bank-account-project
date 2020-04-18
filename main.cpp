@@ -66,5 +66,14 @@ int main() {
 	// Withdraw amounts in checking account
 	withdraw(check_acc_vec, 2000);
 
+	std::cout << "------------------------------" << std::endl;
+
+	std::vector<TrustAccount> trust_acc_vec;
+
+	// Create trust accounts
+	trust_acc_vec.push_back(TrustAccount{});
+	trust_acc_vec.push_back(TrustAccount{"MyTrustAccount"});	
+	trust_acc_vec.push_back(TrustAccount{"MySecondTrustAccount", 4000});
+
 	return 0;
 }

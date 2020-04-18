@@ -1,4 +1,9 @@
+#include <string>
 #include "TrustAccount.h"
+
+TrustAccount::TrustAccount(const std::string name, const double amount) 
+	:name{name}, amount{amount} {
+}
 
 bool TrustAccount::deposit(const double amount) {
 
