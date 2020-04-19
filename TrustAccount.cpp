@@ -18,7 +18,9 @@ bool TrustAccount::deposit(const double amount) {
 
 bool TrustAccount::withdraw(const double amount) {
 
-	if(amount > 0 && num_times_withdrawn <= max_withdraw) {
+	if(amount > 0 && 
+		num_times_withdrawn <= max_withdraw && // Number of times withdrawn must not be more than 3 times.
+		(amount < (balance * 0.2))) { // amount withdrawn must be less than 20% of the account's balance.
 	
 		SavingsAccount::withdraw(amount);
 		return true;
