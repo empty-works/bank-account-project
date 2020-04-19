@@ -1,3 +1,4 @@
+#include <iostream>
 #include <string>
 #include "TrustAccount.h"
 
@@ -14,6 +15,19 @@ bool TrustAccount::deposit(const double amount) {
 	}	
 	return SavingsAccount::deposit(new_amt);
 }
+
+bool TrustAccount::withdraw(const double amount) {
+
+	if(amount > 0) {
+	
+		SavingsAccount::withdraw(amount);
+		return true;
+	}
+	else {
+	
+		return false;
+	}
+}	
 
 std::ostream &operator<<(std::ostream &os, const TrustAccount &acc) {
 

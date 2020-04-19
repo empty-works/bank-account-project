@@ -17,7 +17,8 @@ private:
 public:
 	TrustAccount(const std::string name = default_name, const double amount = default_amount);
 
-	bool deposit(const double amount);	
+	bool deposit(const double amount);
+	bool withdraw(const double amount);	
 };
 
 #endif
