@@ -3,7 +3,7 @@
 #include "TrustAccount.h"
 
 TrustAccount::TrustAccount(const std::string name, const double amount) 
-	:name{name}, amount{amount} {
+	:name{name}, sav_balance{amount} {
 }
 
 bool TrustAccount::deposit(const double amount) {
@@ -31,6 +31,6 @@ bool TrustAccount::withdraw(const double amount) {
 
 std::ostream &operator<<(std::ostream &os, const TrustAccount &acc) {
 
-	os << "[Trust Account Name: " << acc.name << " || " << "Balance: " << acc.balance << " || " << "Interest Rate: " << acc.savings_interest << "%";
+	os << "[Trust Account Name: " << acc.name << " || " << "Balance: " << acc.sav_balance << " || " << "Interest Rate: " << acc.savings_interest << "%";
 	return os;
 }

@@ -78,5 +78,11 @@ int main() {
 
 	std::cout << "------------------------------" << std::endl;
 
+	// Deposit amounts in trust account
+	deposit(trust_acc_vec, 5000);
+	display(trust_acc_vec);
+
+	std::cout << "------------------------------" << std::endl;
+
 	return 0;
 }
