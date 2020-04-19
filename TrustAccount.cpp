@@ -26,7 +26,8 @@ bool TrustAccount::withdraw(const double amount) {
 		return true;
 	}
 	else {
-	
+		
+		std::cout << "Illegal withdrawal amount from trust account." << std::endl;	
 		return false;
 	}
 }	

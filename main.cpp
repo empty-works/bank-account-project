@@ -84,5 +84,8 @@ int main() {
 
 	std::cout << "------------------------------" << std::endl;
 
+	// Withdraw amounts in trust account
+	withdraw(trust_acc_vec, 4999); // More than 20% of balance...should fail.
+
 	return 0;
 }
