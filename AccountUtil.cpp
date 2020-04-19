@@ -125,7 +125,7 @@ void display(const std::vector<TrustAccount> &trust_acc_vec) {
 
 	for(const auto &acc : trust_acc_vec) {
 	
-
+		std::cout << acc << std::endl;
 	}
 }
 

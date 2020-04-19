@@ -74,6 +74,9 @@ int main() {
 	trust_acc_vec.push_back(TrustAccount{});
 	trust_acc_vec.push_back(TrustAccount{"MyTrustAccount"});	
 	trust_acc_vec.push_back(TrustAccount{"MySecondTrustAccount", 4000});
+	display(trust_acc_vec);
+
+	std::cout << "------------------------------" << std::endl;
 
 	return 0;
 }
