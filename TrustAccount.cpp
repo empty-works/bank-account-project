@@ -12,13 +12,13 @@ bool TrustAccount::deposit(const double amount) {
 	if(amount >= 5000) {
 	
 		new_amt += 50;
-	}	
+	}			
 	return SavingsAccount::deposit(new_amt);
 }
 
 bool TrustAccount::withdraw(const double amount) {
 
-	if(amount > 0) {
+	if(amount > 0 && num_times_withdrawn <= max_withdraw) {
 	
 		SavingsAccount::withdraw(amount);
 		return true;
@@ -31,5 +31,6 @@ bool TrustAccount::withdraw(const double amount) {
 
 std::ostream &operator<<(std::ostream &os, const TrustAccount &acc) {
 
-	os << "[Trust Account Name: " << acc.name << " || " << "Balance: " << acc.balance << " || " << "Interest Rate: " << acc.savings_interest;
+	os << "[Trust Account Name: " << acc.name << " || " << "Balance: " << acc.balance << " || " << "Interest Rate: " << acc.savings_interest << "%";
+	return os;
 }

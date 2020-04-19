@@ -132,12 +132,15 @@ void display(const std::vector<TrustAccount> &trust_acc_vec) {
 void deposit(std::vector<TrustAccount> &trust_acc_vec, const double amount) {
 
 	for(auto &acc : trust_acc_vec) {
-	
-		acc.deposit(amount);
+		
+		acc.deposit(amount);	
 	}
 }
 
 void withdraw(std::vector<TrustAccount> &trust_acc_vec, const double amount) {
 
-
+	for(auto &acc : trust_acc_vec) {
+	
+		acc.withdraw(amount);
+	}
 }
