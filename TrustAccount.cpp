@@ -12,7 +12,8 @@ bool TrustAccount::deposit(const double amount) {
 	if(amount >= 5000) {
 	
 		new_amt += 50;
-	}			
+	}		
+
 	return SavingsAccount::deposit(new_amt);
 }
 
@@ -23,6 +24,7 @@ bool TrustAccount::withdraw(const double amount) {
 		(amount < (balance * 0.2))) { // amount withdrawn must be less than 20% of the account's balance.
 	
 		SavingsAccount::withdraw(amount);
+
 		return true;
 	}
 	else {

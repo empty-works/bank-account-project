@@ -80,12 +80,12 @@ int main() {
 
 	// Deposit amounts in trust account
 	deposit(trust_acc_vec, 5000);
-	display(trust_acc_vec);
 
 	std::cout << "------------------------------" << std::endl;
 
 	// Withdraw amounts in trust account
 	withdraw(trust_acc_vec, 4999); // More than 20% of balance...should fail.
+	withdraw(trust_acc_vec, 500); // Valid withdrawal.
 
 	return 0;
 }

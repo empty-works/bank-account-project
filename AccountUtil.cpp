@@ -133,7 +133,11 @@ void deposit(std::vector<TrustAccount> &trust_acc_vec, const double amount) {
 
 	for(auto &acc : trust_acc_vec) {
 		
-		acc.deposit(amount);	
+		bool is_valid = acc.deposit(amount);	
+		if(is_valid) {
+		
+			std::cout << "Deposit $" << amount << " in " << acc << std::endl;
+		}
 	}
 }
 
@@ -141,6 +145,10 @@ void withdraw(std::vector<TrustAccount> &trust_acc_vec, const double amount) {
 
 	for(auto &acc : trust_acc_vec) {
 	
-		acc.withdraw(amount);
+		bool is_valid = acc.withdraw(amount);
+		if(is_valid) {
+		
+			std::cout << "Withdraw $" << amount << " from " << acc << std::endl;
+		}
 	}
 }
