@@ -13,4 +13,9 @@ bool TrustAccount::deposit(const double amount) {
 		new_amt += 50;
 	}	
 	return SavingsAccount::deposit(new_amt);
-}	
+}
+
+std::ostream &operator<<(std::ostream &os, const TrustAccount &acc) {
+
+	os << "[Trust Account Name: " << acc.name << " || " << "Balance: " << acc.balance << " || " << "Interest Rate: " << acc.savings_interest;
+}

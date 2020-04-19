@@ -123,7 +123,10 @@ void withdraw(std::vector<CheckingAccount> &check_acc_vec, const double amount) 
 
 void display(const std::vector<TrustAccount> &trust_acc_vec) {
 
+	for(const auto &acc : trust_acc_vec) {
+	
 
+	}
 }
 
 void deposit(std::vector<TrustAccount> &trust_acc_vec, const double amount) {
