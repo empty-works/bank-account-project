@@ -16,10 +16,11 @@ protected:
 	double savings_interest;
 public:
 	SavingsAccount(std::string name = default_name, double amount = default_amount, double interest = default_interest);
-	~SavingsAccount();
 
 	virtual bool deposit(const double amount) override;
-	virtual bool withdraw(const double amount) override;	
+	virtual bool withdraw(const double amount) override;
+
+	virtual ~SavingsAccount(){}	
 };
 
 #endif
