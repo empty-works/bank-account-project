@@ -16,8 +16,8 @@ private:
 public:
 	Account(std::string acc_name = DEFAULT_NAME, double initial_amt = DEFAULT_AMOUNT);
 	
-	bool deposit(const double amount);
-	bool withdraw(const double amount);
+	virtual bool deposit(const double amount) = 0;
+	virtual bool withdraw(const double amount) = 0;
 
 	std::string get_name() const {return name;}
 	double get_balance() const {return balance;}
