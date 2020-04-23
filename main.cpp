@@ -8,7 +8,8 @@
 int main() {
 	
 	std::vector<Account> acc_vec;
-	
+
+	/*	
 	// Create normal accounts
 	acc_vec.push_back(Account{}); // Account name: Unnamed account || Balance: $0.0
        	acc_vec.push_back(Account{"MyAccount"}); // Account name: MyAccount || Balance: $0.0
@@ -26,7 +27,7 @@ int main() {
 	withdraw(acc_vec, 100);
 
 	std::cout << "------------------------------" << std::endl;
-
+*/
 	std::vector<SavingsAccount> sav_acc_vec;
 
 	// Create savings accounts
