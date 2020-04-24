@@ -17,9 +17,10 @@ public:
 	virtual bool deposit(const double amount) override; 
 	virtual bool withdraw(const double amount) override;
 
-	virtual void print(std::ostream &os) const override {
-	
-		os << "[Checking Account: " << name << " || " << "Balance: " << balance << " || " << "Withdrawal fee: " << checking_fee;
+	virtual std::string print() const override {
+
+		std::string new_string{"[Checking Account: " + name + " || " + "Balance: " + std::to_string(balance) + " || " + "Withdrawal fee: " + std::to_string(checking_fee)};
+		return new_string; 
 	}
 
 	virtual ~CheckingAccount(){}	
