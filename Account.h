@@ -3,8 +3,9 @@
 
 #include <iostream>
 #include <string>
+#include "I_Printable.h"
 
-class Account {
+class Account: public I_Printable {
 
 
 protected:
@@ -19,7 +20,10 @@ public:
 	virtual bool deposit(const double amount) = 0;
 	virtual bool withdraw(const double amount) = 0;
 
+	virtual void print(std::ostream &os) const override {
 	
+		os << "Account test." << std::endl;
+	}
 
 	std::string get_name() const {return name;}
 	double get_balance() const {return balance;}
