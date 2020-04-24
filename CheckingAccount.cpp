@@ -5,6 +5,12 @@ CheckingAccount::CheckingAccount(std::string name, double amount)
 	:Account{name, amount} {
 }
 
+
+bool CheckingAccount::deposit(const double amount) {
+
+	return Account::deposit(amount);	
+} 
+
 bool CheckingAccount::withdraw(const double amount) {
 
 	if(amount > checking_fee) {

@@ -6,7 +6,6 @@ Account::Account(std::string name, double amount)
 	:name{name}, balance{amount} {
 }
 
-/*
 bool Account::deposit(const double amount) {
 
 	if(amount <= 0) {
@@ -31,7 +30,6 @@ bool Account::withdraw(const double amount) {
 		return false;
 	}
 }
-*/
 
 std::ostream &operator<<(std::ostream &os, const Account &acc) {
 	
