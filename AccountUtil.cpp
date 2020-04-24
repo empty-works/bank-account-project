@@ -1,6 +1,7 @@
 #include <iostream>
 #include "AccountUtil.h"
 
+/*
 void display(const std::vector<Account> &acc_vec) {
 
 	for(const auto &acc : acc_vec) {
@@ -40,12 +41,14 @@ void withdraw(std::vector<Account> &acc_vec, const double amount) {
 		}
 	}
 }
+*/
 
 void display(const std::vector<SavingsAccount> &sav_acc_vec) {
 
 	for(const auto &acc : sav_acc_vec) {
 	
-		std::cout << acc << std::endl;
+		//std::cout << acc << std::endl;
+		acc.print(std::cout);
 	}	
 }
 

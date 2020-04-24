@@ -30,9 +30,3 @@ bool Account::withdraw(const double amount) {
 		return false;
 	}
 }
-
-std::ostream &operator<<(std::ostream &os, const Account &acc) {
-	
-	os << "[Account name: " << acc.name  << " || " << "Balance: " << acc.balance << "]";
-	return os;
-}

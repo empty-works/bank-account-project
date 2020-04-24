@@ -27,8 +27,6 @@ public:
 
 	std::string get_name() const {return name;}
 	double get_balance() const {return balance;}
-
-	friend std::ostream &operator<<(std::ostream &os, const Account &acc);
 };
 
 #endif
