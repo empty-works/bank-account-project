@@ -7,8 +7,6 @@
 
 class TrustAccount: public SavingsAccount {
 
-	friend std::ostream &operator<<(std::ostream &os, const TrustAccount &acc);
-
 private:
 	static constexpr const char *default_name = "Unnamed Trust Account";
 	static constexpr double default_amount = 0.0;
@@ -21,7 +19,12 @@ public:
 
 	virtual bool deposit(const double amount) override;
 	virtual bool withdraw(const double amount) override;	
+
+	virtual void print(std::ostream &os) const override {
 	
+		os << "[Trust Account Name: " << name << " || " << "Balance: " << sav_balance << " || " << "Interest Rate: " << savings_interest << "%";
+	}
+
 	virtual ~TrustAccount(){}
 };
 
