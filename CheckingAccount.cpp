@@ -26,9 +26,11 @@ bool CheckingAccount::withdraw(const double amount) {
 	}
 }
 
+/*
 // Need friend method because friendship is not inherited.
 std::ostream &operator<<(std::ostream &os, const CheckingAccount &acc) {
 
 	os << "[Checking Account: " << acc.name << " || " << "Balance: " << acc.balance << " || " << "Withdrawal fee: " << acc.checking_fee;
-       return os;	
+       	return os;	
 }
+*/

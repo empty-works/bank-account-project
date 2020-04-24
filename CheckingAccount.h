@@ -7,8 +7,6 @@
 
 class CheckingAccount: public Account {
 
-friend std::ostream &operator<<(std::ostream &os, const CheckingAccount &acc);
-
 private:
 	static constexpr const char *default_name = "Unnamed Checking Account";
 	static constexpr double init_amount = 0.0;
@@ -19,6 +17,10 @@ public:
 	virtual bool deposit(const double amount) override; 
 	virtual bool withdraw(const double amount) override;
 
+	virtual void print(std::ostream &os) const override {
+	
+		os << "[Checking Account: " << name << " || " << "Balance: " << balance << " || " << "Withdrawal fee: " << checking_fee;
+	}
 
 	virtual ~CheckingAccount(){}	
 };
