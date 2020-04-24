@@ -19,11 +19,15 @@ public:
 	
 	virtual bool deposit(const double amount) = 0;
 	virtual bool withdraw(const double amount) = 0;
+	virtual std::string print() const = 0;
 
 	virtual void print(std::ostream &os) const override {
-	
-		os << "Account test." << std::endl;
+
+		os << print();		
 	}
+
+
+	virtual ~Account(){};
 
 	std::string get_name() const {return name;}
 	double get_balance() const {return balance;}

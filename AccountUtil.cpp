@@ -1,12 +1,11 @@
 #include <iostream>
 #include "AccountUtil.h"
 
-/*
 void display(const std::vector<Account> &acc_vec) {
 
 	for(const auto &acc : acc_vec) {
 	
-		std::cout << acc << std::endl;	
+		std::cout << acc << std::endl;
 	}		
 }
 
@@ -17,7 +16,7 @@ void deposit(std::vector<Account> &acc_vec, const double amount) {
 		bool can_deposit = acc.deposit(amount);
 		if(can_deposit) {
 		
-			std::cout << "Deposited $" << amount << " into " << acc  << std::endl; 
+			std::cout << "Deposited $" << amount << " into " << acc << std::endl; 
 		}
 		else {
 		
@@ -41,8 +40,8 @@ void withdraw(std::vector<Account> &acc_vec, const double amount) {
 		}
 	}
 }
-*/
 
+/*
 void display(const std::vector<SavingsAccount> &sav_acc_vec) {
 
 	for(const auto &acc : sav_acc_vec) {
@@ -155,3 +154,4 @@ void withdraw(std::vector<TrustAccount> &trust_acc_vec, const double amount) {
 		}
 	}
 }
+*/
