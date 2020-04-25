@@ -20,9 +20,9 @@ public:
 	bool deposit(const double amount) override;
 	bool withdraw(const double amount) override;	
 
-	void print(std::ostream &os) const override {
+	std::string print() const override {
 	
-		os << "[Trust Account Name: " << name << " || " << "Balance: " << sav_balance << " || " << "Interest Rate: " << savings_interest << "%";
+		return "[Trust Account Name: " + name + " || " + "Balance: " + std::to_string(sav_balance) + " || " + "Interest Rate: " + std::to_string(savings_interest) + "%";
 	}
 
 	virtual ~TrustAccount(){}

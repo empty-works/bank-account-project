@@ -7,9 +7,9 @@
 #include "CheckingAccount.h"
 #include "TrustAccount.h"
 
-void display(const std::vector<Account> &acc_vec);
-void deposit(std::vector<Account> &acc_vec, const double amount);
-void withdraw(std::vector<Account> &acc_vec, const double amount);
+void display(const std::vector<Account *> &acc_vec);
+void deposit(std::vector<Account *> &acc_vec, const double amount);
+void withdraw(std::vector<Account *> &acc_vec, const double amount);
 
 /*
 void display(const std::vector<SavingsAccount> &sav_acc_vec);
