@@ -59,12 +59,16 @@ int main() {
 	
 	std::cout << "------------------------------" << std::endl;
 	
-	std::vector<CheckingAccount *> check_acc_vec;
+	std::vector<Account *> check_acc_vec;
 	
 	// Create checking account
-	check_acc_vec.push_back(CheckingAccount{});
-	check_acc_vec.push_back(CheckingAccount{"MyCheckingAccount"});
-	check_acc_vec.push_back(CheckingAccount{"MySecondCheckingAccount", 2000});
+	Account *check_acc = new CheckingAccount();
+	Account *check_acc_2 = new CheckingAccount("MyCheckingAccount");
+	Account *check_acc_3 = new CheckingAccount("MySecondCheckingAccount", 2000);
+
+	check_acc_vec.push_back(check_acc);
+	check_acc_vec.push_back(check_acc_2);
+	check_acc_vec.push_back(check_acc_3);
 	display(check_acc_vec);
 
 	std::cout << "------------------------------" << std::endl;
@@ -76,6 +80,10 @@ int main() {
 
 	// Withdraw amounts in checking account
 	withdraw(check_acc_vec, 2000);
+
+	delete check_acc;
+	delete check_acc_2;
+	delete check_acc_3;
 
 	std::cout << "------------------------------" << std::endl;
 
