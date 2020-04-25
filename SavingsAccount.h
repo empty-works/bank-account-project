@@ -16,12 +16,12 @@ protected:
 public:
 	SavingsAccount(std::string name = default_name, double amount = default_amount, double interest = default_interest);
 
-	virtual bool deposit(const double amount) override;
-	virtual bool withdraw(const double amount) override;
+	bool deposit(const double amount) override;
+	bool withdraw(const double amount) override;
 
-	virtual void print(std::ostream &os) const override {
+	std::string print() const override {
 	
-		os << "[Savings account name: " << name << " || " << " Balance: " << balance << " || " << "Interest rate: " << savings_interest << "%]";
+		return "[Savings account name: " + name + " || " + " Balance: " + std::to_string(balance) + " || " + "Interest rate: " + std::to_string(savings_interest) + "%]";
 	}
 
 	virtual ~SavingsAccount(){}	

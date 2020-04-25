@@ -17,10 +17,10 @@ private:
 public:
 	TrustAccount(const std::string name = default_name, const double amount = default_amount);
 
-	virtual bool deposit(const double amount) override;
-	virtual bool withdraw(const double amount) override;	
+	bool deposit(const double amount) override;
+	bool withdraw(const double amount) override;	
 
-	virtual void print(std::ostream &os) const override {
+	void print(std::ostream &os) const override {
 	
 		os << "[Trust Account Name: " << name << " || " << "Balance: " << sav_balance << " || " << "Interest Rate: " << savings_interest << "%";
 	}
