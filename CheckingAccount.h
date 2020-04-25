@@ -14,8 +14,8 @@ protected:
        	static constexpr double checking_fee = 1.50;	
 public:
        	CheckingAccount(std::string name = default_name, double amount = init_amount);	
-	virtual bool deposit(const double amount) override; 
-	virtual bool withdraw(const double amount) override;
+	bool deposit(const double amount) override; 
+	bool withdraw(const double amount) override;
 
 	virtual std::string print() const override {
 

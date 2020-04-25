@@ -21,11 +21,10 @@ public:
 	virtual bool withdraw(const double amount) = 0;
 	virtual std::string print() const = 0;
 
-	virtual void print(std::ostream &os) const override {
+	void print(std::ostream &os) const override {
 
 		os << print();		
 	}
-
 
 	virtual ~Account(){};
 
