@@ -28,10 +28,11 @@ int main() {
 
 	std::cout << "------------------------------" << std::endl;
 */
-	std::vector<SavingsAccount> sav_acc_vec;
+	std::vector<SavingsAccount *> sav_acc_vec;
 
 	// Create savings accounts
-	sav_acc_vec.push_back(SavingsAccount{});
+	SavingsAccount *sav_acc = new SavingsAccount{};
+	sav_acc_vec.push_back(sav_acc);
 	sav_acc_vec.push_back(SavingsAccount{"MySavingsAccount"});		
 	sav_acc_vec.push_back(SavingsAccount{"MySecondSavingsAccount", 2000});
 	sav_acc_vec.push_back(SavingsAccount{"MyThirdSavingsAccount", 2000, 10});
@@ -47,9 +48,11 @@ int main() {
 	// Withdraw amount from savings account
 	withdraw(sav_acc_vec, 500);
 
+	delete sav_acc;
+	
 	std::cout << "------------------------------" << std::endl;
-
-	std::vector<CheckingAccount> check_acc_vec;
+	
+	std::vector<CheckingAccount *> check_acc_vec;
 	
 	// Create checking account
 	check_acc_vec.push_back(CheckingAccount{});
@@ -69,7 +72,7 @@ int main() {
 
 	std::cout << "------------------------------" << std::endl;
 
-	std::vector<TrustAccount> trust_acc_vec;
+	std::vector<TrustAccount *> trust_acc_vec;
 
 	// Create trust accounts
 	trust_acc_vec.push_back(TrustAccount{});
