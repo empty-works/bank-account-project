@@ -90,9 +90,13 @@ int main() {
 	std::vector<TrustAccount *> trust_acc_vec;
 
 	// Create trust accounts
-	trust_acc_vec.push_back(TrustAccount{});
-	trust_acc_vec.push_back(TrustAccount{"MyTrustAccount"});	
-	trust_acc_vec.push_back(TrustAccount{"MySecondTrustAccount", 4000});
+	Account *trust_acc = new TrustAccount();
+	Account *trust_acc_2 = new TrustAccount("MyTrustAccount");
+	Account *trust_acc_3 = new TrustAccount("MySecondTrustAccount", 4000);
+
+	trust_acc_vec.push_back(trust_acc);
+	trust_acc_vec.push_back(trust_acc_2);
+	trust_acc_vec.push_back(trust_acc_3);
 	display(trust_acc_vec);
 
 	std::cout << "------------------------------" << std::endl;
