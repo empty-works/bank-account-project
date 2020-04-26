@@ -23,7 +23,7 @@ public:
 		return new_string; 
 	}
 
-	virtual ~CheckingAccount(){}	
+	virtual ~CheckingAccount() = default;	
 };
 
 #endif

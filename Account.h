@@ -26,7 +26,7 @@ public:
 		os << print();		
 	}
 
-	virtual ~Account(){};
+	virtual ~Account() = default;
 
 	std::string get_name() const {return name;}
 	double get_balance() const {return balance;}

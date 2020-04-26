@@ -24,7 +24,7 @@ public:
 		return "[Savings account name: " + name + " || " + " Balance: " + std::to_string(balance) + " || " + "Interest rate: " + std::to_string(savings_interest) + "%]";
 	}
 
-	virtual ~SavingsAccount(){}	
+	virtual ~SavingsAccount() = default;	
 };
 
 #endif

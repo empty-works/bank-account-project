@@ -7,8 +7,6 @@
 
 int main() {
 	
-	std::vector<Account> acc_vec;
-
 	std::vector<Account *> sav_acc_vec;
 
 	// Create savings accounts

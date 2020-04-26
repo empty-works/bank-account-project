@@ -25,7 +25,7 @@ public:
 		return "[Trust Account Name: " + name + " || " + "Balance: " + std::to_string(sav_balance) + " || " + "Interest Rate: " + std::to_string(savings_interest) + "%";
 	}
 
-	virtual ~TrustAccount(){}
+	virtual ~TrustAccount() = default;
 };
 
 #endif
