@@ -9,25 +9,6 @@ int main() {
 	
 	std::vector<Account> acc_vec;
 
-	/*	
-	// Create normal accounts
-	acc_vec.push_back(Account{}); // Account name: Unnamed account || Balance: $0.0
-       	acc_vec.push_back(Account{"MyAccount"}); // Account name: MyAccount || Balance: $0.0
-	acc_vec.push_back(Account{"MySecondAccount", 1000.00}); // Account name: MySecondAccount || Balance: $1000.00	
-	display(acc_vec);		
-
-	std::cout << "------------------------------" << std::endl;
-
-	// Deposit amounts in normal account
-	deposit(acc_vec, 1000);
-
-	std::cout << "------------------------------" << std::endl;
-
-	// Withdraw amounts in normal account
-	withdraw(acc_vec, 100);
-
-	std::cout << "------------------------------" << std::endl;
-*/
 	std::vector<Account *> sav_acc_vec;
 
 	// Create savings accounts
@@ -87,7 +68,7 @@ int main() {
 
 	std::cout << "------------------------------" << std::endl;
 
-	std::vector<TrustAccount *> trust_acc_vec;
+	std::vector<Account *> trust_acc_vec;
 
 	// Create trust accounts
 	Account *trust_acc = new TrustAccount();
