@@ -19,13 +19,7 @@ public:
 	
 	virtual bool deposit(const double amount) = 0;
 	virtual bool withdraw(const double amount) = 0;
-	virtual std::string print() const = 0;
-
-	void print(std::ostream &os) const override {
-
-		os << print();		
-	}
-
+	virtual void print(std::ostream &os) const override;
 	virtual ~Account() = default;
 
 	std::string get_name() const {return name;}
