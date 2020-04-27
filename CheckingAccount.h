@@ -16,12 +16,7 @@ public:
        	CheckingAccount(std::string name = default_name, double amount = init_amount);	
 	bool deposit(const double amount) override; 
 	bool withdraw(const double amount) override;
-
-	virtual std::string print() const override {
-
-		std::string new_string{"[Checking Account: " + name + " || " + "Balance: " + std::to_string(balance) + " || " + "Withdrawal fee: " + std::to_string(checking_fee)};
-		return new_string; 
-	}
+	void print(std::ostream &os) const override;
 
 	virtual ~CheckingAccount() = default;	
 };

@@ -25,3 +25,10 @@ bool CheckingAccount::withdraw(const double amount) {
 		return false;
 	}
 }
+
+void CheckingAccount::print(std::ostream &os) const {
+
+	os.precision(2);
+	os << std::fixed;
+	os << "[Checking Account: " << name << " || " << "Balance: " << balance << " || " << "Withdrawal fee: " << checking_fee;
+}
