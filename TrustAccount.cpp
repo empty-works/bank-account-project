@@ -32,4 +32,11 @@ bool TrustAccount::withdraw(const double amount) {
 		std::cout << "Illegal withdrawal amount from trust account." << std::endl;	
 		return false;
 	}
-}	
+}
+
+void TrustAccount::print(std::ostream &os) const {
+
+	os.precision(2);
+	os << std::fixed;
+	os << "[Trust Account Name: " << name << " || " << "Balance: " << sav_balance << " || " << "Interest Rate: " << savings_interest << "%";
+}
