@@ -18,11 +18,7 @@ public:
 
 	bool deposit(const double amount) override;
 	bool withdraw(const double amount) override;
-
-	std::string print() const override {
-	
-		return "[Savings account name: " + name + " || " + " Balance: " + std::to_string(balance) + " || " + "Interest rate: " + std::to_string(savings_interest) + "%]";
-	}
+	void print(std::ostream &os) const override;	
 
 	virtual ~SavingsAccount() = default;	
 };
