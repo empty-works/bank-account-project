@@ -1,15 +1,25 @@
 #include <iostream>
 #include <vector>
+#include <memory>
 #include "Account.h"
 #include "SavingsAccount.h"
 #include "CheckingAccount.h"
 #include "AccountUtil.h"
+#include "IllegalBalanceException.h"
 
 int main() {
 	
 	std::vector<Account *> sav_acc_vec;
 
+	try {
+	std::unique_ptr<Account> acc_ptr = std::make_unique<SavingsAccount>("Test Account", 1000);	
+	}
+	catch(IllegalBalanceException &e) {
+		
+		std::cout << e << std::endl;	
+	}
 	// Create savings accounts
+	/*
 	Account *sav_acc = new SavingsAccount();
 	Account *sav_acc_2 = new SavingsAccount("MySavingsAccount");
 	Account *sav_acc_3 = new SavingsAccount("MySecondSavingsAccount", 2000);
@@ -88,6 +98,7 @@ int main() {
 	// Withdraw amounts in trust account
 	withdraw(trust_acc_vec, 4999); // More than 20% of balance...should fail.
 	withdraw(trust_acc_vec, 500); // Valid withdrawal.
+	*/
 
 	return 0;
 }

@@ -8,7 +8,7 @@ Account::Account(std::string name, double amount)
 
 	if(amount < 0) {
 	
-		throw IllegalBalanceException{};
+		throw IllegalBalanceException();
 	}
 }
 
