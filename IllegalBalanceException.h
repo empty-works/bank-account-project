@@ -7,7 +7,7 @@ class IllegalBalanceException: public std::exception {
 	IllegalBalanceException() noexcept = default;
 	~IllegalBalanceException() = default;
 	
-	virtual const char * what() const noexcept {
+	virtual const char *what() const noexcept {
 	
 		return "Illegal balance exception.";	
 	}

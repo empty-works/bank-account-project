@@ -12,11 +12,11 @@ int main() {
 	std::vector<Account *> sav_acc_vec;
 
 	try {
-	std::unique_ptr<Account> acc_ptr = std::make_unique<SavingsAccount>("Test Account", 1000);	
+	std::unique_ptr<Account> acc_ptr = std::make_unique<SavingsAccount>("Test Account", -1000);	
 	}
 	catch(IllegalBalanceException &e) {
 		
-		std::cout << e << std::endl;	
+		std::cout << e.what() << std::endl;	
 	}
 	// Create savings accounts
 	/*
