@@ -2,6 +2,7 @@
 #include <string>
 #include "Account.h"
 #include "IllegalBalanceException.h"
+#include "InsufficientFundsException.h"
 
 Account::Account(std::string name, double amount)
 	:name{name}, balance{amount} {
@@ -33,6 +34,7 @@ bool Account::withdraw(const double amount) {
 	}
 	else {
 	
+		throw InsufficientFundsException();
 		return false;
 	}
 }
